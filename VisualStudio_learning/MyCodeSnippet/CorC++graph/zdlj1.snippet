@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>zdlj1</Title>
+			<Shortcut>zdlj1</Shortcut>
+			<Description>zdlj1的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[int getMin(int* d, int* s, Graph* G) {
+    int min = MAX;
+    int index;
+    for (int i = 0; i < G -> vexNum; i++) {
+        if (!s[i] && d[i] < min) {
+            min = d[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+void dijkstra(Graph* G, int index) {
+    // 准备辅助数组
+    int* s = (int*)malloc(sizeof(int) * G -> vexNum);
+    int* p = (int*)malloc(sizeof(int) * G -> vexNum);
+    int* d = (int*)malloc(sizeof(int) * G -> vexNum);
+    // 初始化辅助数组
+    for (int i = 0; i < G -> vexNum; i++) {
+        if (G -> arcs[index][i] > 0 && G -> arcs[index][i] != MAX) {
+            d[i] = G -> arcs[index][i];
+            p[i] = index;
+        }
+        else {
+            d[i] = MAX;
+            p[i] = -1;
+        }
+        if (i == index) {
+            s[i] = 1;
+            d[i] = 0;
+        }
+        else
+            s[i] = 0;
+    }
+    for (int i = 0; i < G -> vexNum - 1; i++) {
+        int index = getMin(d, s, G);
+        s[index] = 1;
+        for (int j = 0; j < G -> vexNum; j++) {
+            if (!s[j] && d[index] + G -> arcs[index][j] < d[j]) {
+                d[j] = d[index] + G -> arcs[index][j];
+                p[j] = index;
+            }
+        }
+    }
+    for (int i = 0; i < G ->vexNum; i++) {
+        printf("%d %d %d\n", s[i], p[i], d[i]);
+    }
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

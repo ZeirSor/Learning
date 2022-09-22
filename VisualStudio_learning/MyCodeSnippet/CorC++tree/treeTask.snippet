@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeTask</Title>
+			<Shortcut>treeTask</Shortcut>
+			<Description>treeTask的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void Postorder_iter(BiTree T)
+{
+	LinkStack S;	
+	InitLinkStack(&S);		//初始化栈
+
+	ET e;	
+	BiTNode* p;
+	e.ptr = T;				
+	e.task = 1;
+	PushLinkStack(&S, e);
+
+	while (!IsLinkStackEmpty(S))
+	{
+		e = GetLinkStackTop(S);
+		PopLinkStack(&S, e);
+		if (e.task == 0)					//访问
+		{
+			printf("%s ", e.ptr->Data.str);
+		}
+		else                                //遍历
+		{
+			e.task = 0;
+			PushLinkStack(&S, e);			//访问根节点
+
+			p = e.ptr;						//维护当前指针
+
+			e.ptr = p->RightChild;			//访问右子树
+								
+			if (e.ptr)
+			{
+				e.task = 1;					//布置任务
+				PushLinkStack(&S, e);
+			}
+					
+			e.ptr = p->LeftChild;			//访问左子树
+			if (e.ptr)
+			{
+				e.task = 1;
+				PushLinkStack(&S, e);
+			}		
+		}
+	}
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

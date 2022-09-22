@@ -1,0 +1,80 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+      {
+        "name": "C/C++: g++.exe build and debug active file",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:\\Program Files\\RedPanda-Cpp\\MinGW64\\bin\\gdb.exe",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "C/C++: g++.exe build active file"
+      }
+    ]
+}
+//{
+//  // 使用 IntelliSense 了解相关属性。 
+//  // 悬停以查看现有属性的描述。
+//  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+//  "version": "0.2.0",
+//  "configurations": [
+//    {
+//      "name": "cl.exe - 生成和调试活动文件",
+//      "type": "cppvsdbg",
+//      "request": "launch",
+//      "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+//      "args": [],
+//      "stopAtEntry": false,
+//      "cwd": "${fileDirname}",
+//      "environment": [],
+//      "console": "integratedTerminal",
+//      "preLaunchTask": "cl.exe build active file"
+//    },
+//    {
+//      "name": "temp.cpp",
+//      "type": "cppvsdbg",
+//      "request": "launch",
+//      "program": "${workspaceFolder}\\temp.exe",
+//      "args": [],
+//      "stopAtEntry": false,
+//      "cwd": "${fileDirname}",
+//      "environment": [],
+//      "console": "integratedTerminal",
+//      "preLaunchTask": "cl.exe build active file"
+//    },
+//    {
+//      "name": "C/C++: g++.exe build and debug active file",
+//      "type": "cppdbg",
+//      "request": "launch",
+//      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+//      "args": [],
+//      "stopAtEntry": false,
+//      "cwd": "${fileDirname}",
+//      "environment": [],
+//      "externalConsole": false,
+//      "MIMode": "gdb",
+//      "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+//      "setupCommands": [
+//        {
+//          "description": "Enable pretty-printing for gdb",
+//          "text": "-enable-pretty-printing",
+//          "ignoreFailures": true
+//        }
+//      ],
+//      "preLaunchTask": "C/C++: g++.exe build active file"
+//    }
+//  ]
+//}

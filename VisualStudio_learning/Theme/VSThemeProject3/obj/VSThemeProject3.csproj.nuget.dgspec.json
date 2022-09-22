@@ -1,0 +1,55 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\VisualStudio_learning\\Theme\\VSThemeProject3\\VSThemeProject3.csproj": {}
+  },
+  "projects": {
+    "D:\\VisualStudio_learning\\Theme\\VSThemeProject3\\VSThemeProject3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VisualStudio_learning\\Theme\\VSThemeProject3\\VSThemeProject3.csproj",
+        "projectName": "VSThemeProject3",
+        "projectPath": "D:\\VisualStudio_learning\\Theme\\VSThemeProject3\\VSThemeProject3.csproj",
+        "packagesPath": "C:\\Users\\ZeirSor\\.nuget\\packages\\",
+        "outputPath": "D:\\VisualStudio_learning\\Theme\\VSThemeProject3\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\ZeirSor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.VisualStudio.VsixColorCompiler": {
+              "target": "Package",
+              "version": "[17.0.31709.430, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

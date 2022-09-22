@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>algraphBFS</Title>
+			<Shortcut>algraphBFS</Shortcut>
+			<Description>algraphBFS的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void bfs_alg(ALGraph* GL, int* visited, int index)
+{
+	Queue* Q = initQueue();
+	printf("%c\t", GL->List[index].vex);
+	visited[index] = 1;
+	enQueue(Q, index);
+	while (!isEmpty(Q)) {
+		int i =  posInALGraph(GL, deQueue(Q));
+		arcNode* p = GL->List[index].First;
+		while (p) {
+			if (visited[p->vex_num] == 0) {
+				printf("%c\t", GL->List[p->vex_num].vex);
+				visited[p->vex_num] = 1;
+				enQueue(Q, p->vex_num);
+			}
+			p = p->next;
+		}
+	}
+}
+
+void bfs_ALGraph(ALGraph* GL)
+{
+	string s;
+	cin >> s;
+	memset(visited, 0, sizeof visited);
+	int start = posInALGraph(GL, s);
+	dfs_alg(GL, visited, start);
+	for (int i = 0; i < GL->vexNum; i++) {
+		if (visited[i] != 1)
+			bfs_alg(GL, visited, i);
+	}
+	cout << endl;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>algraphDFS</Title>
+			<Shortcut>algraphDFS</Shortcut>
+			<Description>algraphDFS的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void dfs_alg(ALGraph* GL, int* visited, int index)
+{
+	cout << GL->List[index].vex << ' ';
+	visited[index] = 1;
+
+	arcNode* p = GL->List[index].First;
+	while (p) {
+		if (visited[p->vex_num] == 0)
+			dfs_alg(GL, visited, p->vex_num);
+		p = p->next;
+	}
+}
+
+void dfs_ALGraph(ALGraph* GL)
+{
+	string s;
+	cin >> s;
+	memset(visited, 0, sizeof visited);
+	int start = posInALGraph(GL, s);
+	dfs_alg(GL, visited, start);
+	for (int i = 0; i < GL->vexNum; i++) {
+		if (visited[i] != 1)
+			dfs_alg(GL, visited, i);
+	}
+	cout << endl;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,8 @@
+﻿  C++_Learning.cpp
+D:\Visual Studio_learning\C++_learning\C++_Learning\C++_Learning\C++_Learning.cpp(103,15): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+D:\Visual Studio_learning\C++_learning\C++_Learning\C++_Learning\C++_Learning.cpp(108,15): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+D:\Visual Studio_learning\C++_learning\C++_Learning\C++_Learning\C++_Learning.cpp(126,19): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+D:\Visual Studio_learning\C++_learning\C++_Learning\C++_Learning\C++_Learning.cpp(127,21): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+D:\Visual Studio_learning\C++_learning\C++_Learning\C++_Learning\C++_Learning.cpp(127,16): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+D:\Visual Studio_learning\C++_learning\C++_Learning\C++_Learning\C++_Learning.cpp(164,28): warning C4305: “初始化”: 从“double”到“float”截断
+  C++_Learning.vcxproj -> D:\Visual Studio_learning\C++_learning\C++_Learning\Debug\C++_Learning.exe

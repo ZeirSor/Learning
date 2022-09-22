@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>cmenu</Title>
+			<Shortcut>cmenu</Shortcut>
+			<Description>菜单模板</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[char fun;
+while (1)
+{
+	printf("\n\n");
+	printf("\t\t\t************************************************************\n");
+	printf("\t\t\t*************************** 菜单 ***************************\n");
+	printf("\t\t\t	| 1 |	\n");
+	printf("\t\t\t	| 2 |	\n");
+	printf("\t\t\t	| 3 |	\n");
+	printf("\t\t\t	| 4 |	\n");
+	printf("\t\t\t	| 5 |	\n");
+	printf("\t\t\t	| 0 |	退出程序\n");
+	printf("\t\t\t************************************************************\n");
+	printf("\t\t\t************************************************************\n");
+	fun = _getch();
+	switch ((int)(fun - '0'))
+	{
+		case 0:
+			return 0;
+		case 1:
+			system("cls");
+			break;
+		case 2:
+			system("cls");
+			printf("\n");
+			break;
+		case 3:
+			system("cls");
+			printf("\n");		
+			break;
+		case 4:
+			system("cls");
+			printf("\n");
+			break;
+		case 5:
+			system("cls");
+			printf("\n");
+			break;
+		default:
+			system("cls");
+			printf("输入错误！\n");
+			break;
+	}
+	printf("请按任意键继续！");
+	getchar();
+	getchar();
+	system("cls");
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

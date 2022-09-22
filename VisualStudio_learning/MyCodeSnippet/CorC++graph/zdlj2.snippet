@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>zdlj2</Title>
+			<Shortcut>zdlj2</Shortcut>
+			<Description>zdlj2的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void floyd(Graph* G) {
+    int d[G -> vexNum][G -> vexNum];
+    int p[G -> vexNum][G -> vexNum];
+    for (int i = 0; i < G -> vexNum; i++) {
+        for (int j = 0; j < G -> vexNum; j++) {
+            d[i][j] = G -> arcs[i][j];
+            if (G -> arcs[i][j] > 0 && G -> arcs[i][j] != MAX) {
+                p[i][j] = i;
+            }
+            else
+                p[i][j] = -1;
+        }
+    }
+
+    for (int i = 0; i < G -> vexNum; i++) {
+        for (int j = 0; j < G -> vexNum; j++) {
+            for (int k = 0; k < G -> vexNum; k++) {
+                if (d[j][i] + d[i][k] < d[j][k]) {
+                    d[j][k] = d[j][i] + d[i][k];
+                    p[j][k] = p[i][k];
+                }
+            }
+        }
+    }
+
+    for (int i = 0; i < G -> vexNum; i++) {
+        for (int j = 0; j < G -> vexNum; j++) {
+            printf("%d ", d[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for (int i = 0; i < G -> vexNum; i++) {
+        for (int j = 0; j < G -> vexNum; j++) {
+            printf("%d ", p[i][j]);
+        }
+        printf("\n");
+    }
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

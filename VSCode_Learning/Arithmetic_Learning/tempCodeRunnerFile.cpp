@@ -1,0 +1,1 @@
+if (abs(x - i) + abs(y - j) > n / 2)

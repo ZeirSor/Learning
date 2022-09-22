@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeDent</Title>
+			<Shortcut>treeDent</Shortcut>
+			<Description>treeDent的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[const char* dentPrint(treeNode* T, int level, const char* flag)
+{
+	int i, j;
+	if (T) {
+		for (i = 1; i < level; i++) {
+			printf(" ");
+		}
+		printf("%d(%s)", T->data, flag);
+
+		cout << endl;
+		dentPrint(T->leftChild, level + 4, "L");
+		dentPrint(T->rightChild, level + 4, "R");
+		return "PRINT SUCCESSFULLY!";
+	}
+	else return "THE TREE IS NULL!";
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

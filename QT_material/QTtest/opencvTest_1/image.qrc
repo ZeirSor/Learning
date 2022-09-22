@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>defectionImage/defectionImage_1.png</file>
+        <file>defectionImage/defectionImage_4.png</file>
+        <file>defectionImage/defectionImage_5.png</file>
+        <file>defectionImage/defectionImage_6.png</file>
+        <file>defectionImage/defectionImage_7.png</file>
+        <file>defectionImage/defectionImage_8.png</file>
+        <file>defectionImage/defectionImage_9.png</file>
+        <file>defectionImage/defectionImage_10.png</file>
+        <file>defectionImage/defectionImage_11.png</file>
+        <file>defectionImage/defectionImage_12.png</file>
+        <file>defectionImage/defectionImage_13.png</file>
+        <file>defectionImage/defectionImage_14.png</file>
+        <file>defectionImage/defectionImage_15.png</file>
+        <file>defectionImage/defectionImage_16.png</file>
+    </qresource>
+</RCC>

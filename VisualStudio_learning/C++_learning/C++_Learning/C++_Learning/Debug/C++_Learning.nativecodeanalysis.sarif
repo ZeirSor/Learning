@@ -1,0 +1,498 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6001",
+          "message": {
+            "text": "使用未初始化的内存“m”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 10,
+                  "endLine": 51,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?main_NewAndDelete@@YAHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 49,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "未初始化“m”"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 7
+                          }
+                        },
+                        "message": {
+                          "text": "“m”是“std::basic_ostream<char,std::char_traits<char> >::<<”的输入/输出参数(在 d:\\vs2019\\vc\\tools\\msvc\\14.29.30133\\include\\ostream:439 处声明)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "已使用“m”，但可能尚未将其初始化"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "算术溢出: 使用 4 字节值上的运算符 * ，然后将结果转换到 8 字节值。在调用运算符 * 之前将值强制转换为宽类型可避免溢出(io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+                },
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 17,
+                  "endLine": 87,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?sumSq@@YAHNH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30145.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0087D1C0 -il C:\\Users\\win10\\AppData\\Local\\Temp\\_CL_9aa227f3ast -typedil -f C++_Learning.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930145 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\C++_Learning.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory D:\\Visual Studio_learning\\C++_learning\\C++_Learning\\C++_Learning -analyze:rulesetdirectory ;D:\\VS2019\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset D:\\VS2019\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\include -I D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I D:\\VS2019\\VC\\Auxiliary\\VS\\include -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I D:\\Visual Studio_learning\\C++_learning\\C++_Learning\\C++_Learning\\Include\\um -external:I D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\include -I D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I D:\\VS2019\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I D:\\VS2019\\VC\\Auxiliary\\VS\\include -I D:\\VS2019\\VC\\Auxiliary\\VS\\include -external:I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I D:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I D:\\Visual Studio_learning\\C++_learning\\C++_Learning\\C++_Learning\\Include\\um -I D:\\Visual Studio_learning\\C++_learning\\C++_Learning\\C++_Learning\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Visual Studio_learning/C++_learning/C++_Learning/C++_Learning/C++_Learning.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "3b87c34e0d369d7ca9ef999e277e7c69"
+          }
+        }
+      ]
+    }
+  ]
+}

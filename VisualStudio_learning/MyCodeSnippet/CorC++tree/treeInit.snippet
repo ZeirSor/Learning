@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeInit</Title>
+			<Shortcut>treeInit</Shortcut>
+			<Description>treeInit的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[typedef struct treeNode
+{
+	int data;
+	struct treeNode* leftChild;
+	struct treeNode* rightChild;
+}treeNode, * treeNodePtr;
+
+void preCreate(treeNode** T)
+{
+	int data;
+	cin >> data;
+	if (data == -1) {
+		*T == NULL;
+	}
+	else {
+		*T = (treeNode*) malloc(sizeof(treeNode));
+		(*T)->leftChild = NULL;
+		(*T)->rightChild = NULL;
+		(*T)->data = data;
+		preCreate(&(*T)->leftChild);
+		preCreate(&(*T)->rightChild);
+	}
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

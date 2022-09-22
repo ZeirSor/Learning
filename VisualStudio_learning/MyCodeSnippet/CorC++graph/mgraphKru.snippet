@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mgraphKru</Title>
+			<Shortcut>mgraphKru</Shortcut>
+			<Description>mgraphKru的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[typedef struct Edge {
+    int start;
+    int end;
+    int weight;
+}Edge;
+
+Edge* initEdge(Graph* G) {
+    int index = 0;
+    Edge* edge = (Edge*)malloc(sizeof(Edge) * G -> arcNum);
+    for (int i = 0; i < G -> vexNum; i++) {
+        for (int j = i + 1; j < G -> vexNum; j++) {
+            if (G -> arcs[i][j] != MAX) {
+                edge[index].start = i;
+                edge[index].end = j;
+                edge[index].weight = G -> arcs[i][j];
+                index++;
+            }
+        }
+    }
+    return edge;
+}
+
+void sortEdge(Edge* edge, Graph* G) {
+    Edge temp;
+    for (int i = 0; i < G -> arcNum - 1; i++) {
+        for (int j = 0; j < G -> arcNum - i - 1; j++) {
+            if (edge[j].weight > edge[j + 1].weight) {
+                temp = edge[j];
+                edge[j] = edge[j + 1];
+                edge[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void kruskal(Graph* G) {
+    int* connected = (int*)malloc(sizeof(int) * G -> vexNum);
+    for (int i = 0 ; i < G -> vexNum; i++) {
+        connected[i] = i;		//规定一开始的连通分量是自己
+    }
+    Edge* edge = initEdge(G);
+    sortEdge(edge, G);
+    for (int i = 0; i < G -> arcNum; i++) {
+        int start = connected[edge[i].start];
+        int end = connected[edge[i].end];
+        if (start != end) {
+            printf("v%c --> v%c weight = %d\n", G -> vexs[edge[i].start], G -> vexs[edge[i].end], edge[i].weight);
+            for (int j = 0; j < G -> vexNum; j++) {
+                if (connected[j] == end) {
+                    connected[j] = start;
+                }
+            }
+        }
+    }
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

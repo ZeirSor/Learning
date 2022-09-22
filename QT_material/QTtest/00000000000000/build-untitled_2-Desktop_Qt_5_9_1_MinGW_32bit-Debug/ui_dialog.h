@@ -1,0 +1,183 @@
+/********************************************************************************
+** Form generated from reading UI file 'dialog.ui'
+**
+** Created by: Qt User Interface Compiler version 5.9.1
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_DIALOG_H
+#define UI_DIALOG_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextEdit>
+#include <QtWidgets/QVBoxLayout>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_Dialog
+{
+public:
+    QVBoxLayout *verticalLayout;
+    QGroupBox *zitiYangShi;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_4;
+    QGroupBox *zitiYanse;
+    QHBoxLayout *horizontalLayout_2;
+    QRadioButton *radioButton;
+    QRadioButton *radioButton_2;
+    QRadioButton *radioButton_3;
+    QTextEdit *textEdit;
+    QHBoxLayout *BtnFunction;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *OK;
+    QPushButton *cancel;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *quit;
+
+    void setupUi(QDialog *Dialog)
+    {
+        if (Dialog->objectName().isEmpty())
+            Dialog->setObjectName(QStringLiteral("Dialog"));
+        Dialog->resize(387, 222);
+        verticalLayout = new QVBoxLayout(Dialog);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        zitiYangShi = new QGroupBox(Dialog);
+        zitiYangShi->setObjectName(QStringLiteral("zitiYangShi"));
+        horizontalLayout = new QHBoxLayout(zitiYangShi);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        pushButton = new QPushButton(zitiYangShi);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+
+        horizontalLayout->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(zitiYangShi);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+
+        horizontalLayout->addWidget(pushButton_2);
+
+        pushButton_4 = new QPushButton(zitiYangShi);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+
+        horizontalLayout->addWidget(pushButton_4);
+
+
+        verticalLayout->addWidget(zitiYangShi);
+
+        zitiYanse = new QGroupBox(Dialog);
+        zitiYanse->setObjectName(QStringLiteral("zitiYanse"));
+        horizontalLayout_2 = new QHBoxLayout(zitiYanse);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        radioButton = new QRadioButton(zitiYanse);
+        radioButton->setObjectName(QStringLiteral("radioButton"));
+
+        horizontalLayout_2->addWidget(radioButton);
+
+        radioButton_2 = new QRadioButton(zitiYanse);
+        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
+
+        horizontalLayout_2->addWidget(radioButton_2);
+
+        radioButton_3 = new QRadioButton(zitiYanse);
+        radioButton_3->setObjectName(QStringLiteral("radioButton_3"));
+
+        horizontalLayout_2->addWidget(radioButton_3);
+
+
+        verticalLayout->addWidget(zitiYanse);
+
+        textEdit = new QTextEdit(Dialog);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        QFont font;
+        font.setPointSize(15);
+        textEdit->setFont(font);
+
+        verticalLayout->addWidget(textEdit);
+
+        BtnFunction = new QHBoxLayout();
+        BtnFunction->setSpacing(6);
+        BtnFunction->setObjectName(QStringLiteral("BtnFunction"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        BtnFunction->addItem(horizontalSpacer);
+
+        OK = new QPushButton(Dialog);
+        OK->setObjectName(QStringLiteral("OK"));
+
+        BtnFunction->addWidget(OK);
+
+        cancel = new QPushButton(Dialog);
+        cancel->setObjectName(QStringLiteral("cancel"));
+
+        BtnFunction->addWidget(cancel);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        BtnFunction->addItem(horizontalSpacer_2);
+
+        quit = new QPushButton(Dialog);
+        quit->setObjectName(QStringLiteral("quit"));
+
+        BtnFunction->addWidget(quit);
+
+
+        verticalLayout->addLayout(BtnFunction);
+
+
+        retranslateUi(Dialog);
+        QObject::connect(OK, SIGNAL(clicked()), Dialog, SLOT(accept()));
+        QObject::connect(cancel, SIGNAL(clicked()), Dialog, SLOT(reject()));
+        QObject::connect(quit, SIGNAL(clicked()), Dialog, SLOT(close()));
+
+        QMetaObject::connectSlotsByName(Dialog);
+    } // setupUi
+
+    void retranslateUi(QDialog *Dialog)
+    {
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", Q_NULLPTR));
+        zitiYangShi->setTitle(QApplication::translate("Dialog", "\345\255\227\344\275\223\346\240\267\345\274\217", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("Dialog", "underline", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("Dialog", "Italic", Q_NULLPTR));
+        pushButton_4->setText(QApplication::translate("Dialog", "Bold", Q_NULLPTR));
+        zitiYanse->setTitle(QApplication::translate("Dialog", "\345\255\227\344\275\223\351\242\234\350\211\262", Q_NULLPTR));
+        radioButton->setText(QApplication::translate("Dialog", "Blue", Q_NULLPTR));
+        radioButton_2->setText(QApplication::translate("Dialog", "Red", Q_NULLPTR));
+        radioButton_3->setText(QApplication::translate("Dialog", "Black", Q_NULLPTR));
+        textEdit->setHtml(QApplication::translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'SimSun'; font-size:15pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hello World!</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", Q_NULLPTR));
+        OK->setText(QApplication::translate("Dialog", "\347\241\256\345\256\236", Q_NULLPTR));
+        cancel->setText(QApplication::translate("Dialog", "\345\217\226\346\266\210", Q_NULLPTR));
+        quit->setText(QApplication::translate("Dialog", "\351\200\200\345\207\272", Q_NULLPTR));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class Dialog: public Ui_Dialog {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_DIALOG_H

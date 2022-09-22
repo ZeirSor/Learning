@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>cml</Title>
+			<Shortcut>cml</Shortcut>
+			<Description>malloc的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Default>size_t</Default>
+					<ToolTip>控制变量类型</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Default>Name</Default>
+					<ToolTip>名字</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>length</ID>
+					<Default>length</Default>
+					<ToolTip>长度</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[$type$$end$ *$name$ = ($type$ *) malloc (sizeof($type$) * $length$); ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

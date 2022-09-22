@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>algraphPrint</Title>
+			<Shortcut>algraphPrint</Shortcut>
+			<Description>algraphPrint的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void show_ALGraph(ALGraph* GL)
+{
+	printf("\n图的邻接表为：\n");
+	for (int i = 0; i < GL->vexNum; i++) {
+		printf("\t____\n");
+		cout << '\t' << GL->List[i].vex << "-->";
+		arcNode* s = GL->List[i].First;
+		while (s) {
+			arcNode* p = s->next;
+			cout << GL->List[s->vex_num].vex << '(' << s->weight << ')';
+			if (p) printf("-->");
+			s = s->next;
+		}
+		printf("\n");
+		printf("\t￣￣\n");
+	}
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

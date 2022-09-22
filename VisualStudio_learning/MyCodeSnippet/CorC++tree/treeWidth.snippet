@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeWidth</Title>
+			<Shortcut>treeWidth</Shortcut>
+			<Description>treeWidth的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[int widthTree(treeNode* T)
+{
+	Queue* Q = initQueue();
+	int len = 0;
+	int width = 0;
+	enQueue(Q, T);
+	while (!isEmpty(Q)) {
+		len = queueLength(Q);
+		if (len > width)
+			width = len;
+		for (int i = 0; i < len; i++) {
+			treeNode* de = deQueue(Q);
+			if (de->leftChild)
+				enQueue(Q, de->leftChild);
+			if (de->rightChild)
+				enQueue(Q, de->rightChild);
+		}
+	}
+	return width;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

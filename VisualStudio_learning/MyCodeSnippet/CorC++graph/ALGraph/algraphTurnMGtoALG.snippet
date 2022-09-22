@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>algraphTurnMGtoALG</Title>
+			<Shortcut>algraphTurnMGtoALG</Shortcut>
+			<Description>algraphTurnMGtoALG的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[ALGraph* turn_MgToALg(MGraph* G)
+{
+	ALGraph* GL = new ALGraph;
+	GL->vexNum = G->vertexNum;
+	GL->arcsNum = G->arcsNum;
+
+	for (int i = 0; i < GL->vexNum; i++) {
+		GL->List[i].vex = G->vertex[i];
+		GL->List[i].First = NULL;
+	}
+
+	int start, end, w;
+
+	for (int i = 0; i < GL->vexNum; i++) {
+		for (int j = 0; j < GL->vexNum; j++) {
+			if (G->Matrix[i][j] != 52725 and G->Matrix[i][j] != 0 ) {
+				start = i, end = j, w = G->Matrix[i][j];
+				arcNode* s = new arcNode;
+				s->vex_num = end;
+				s->weight = w;
+				s->next = GL->List[start].First;
+				GL->List[start].First = s;
+			}
+		}
+	}
+	return GL;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

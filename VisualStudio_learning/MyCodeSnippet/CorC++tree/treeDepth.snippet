@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeDepth</Title>
+			<Shortcut>treeDepth</Shortcut>
+			<Description>treeDepth的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[int depthTree(treeNode* T)
+{
+	if (!T)
+		return 0;
+	else {
+		int leftDepth = depthTree(T->leftChild);
+		int rightDepth = depthTree(T->rightChild);
+		if (leftDepth > rightDepth)
+			return leftDepth + 1;
+		else
+			return rightDepth + 1;
+	}
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treePrint</Title>
+			<Shortcut>treePrint</Shortcut>
+			<Description>treePrint的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void preOrder(treeNode* T)
+{
+	if (T == NULL)
+		return;
+	else {
+		printf("%d ", T->data);
+		//puts(T->data);
+		preOrder(T->leftChild);
+		preOrder(T->rightChild);
+	}
+}
+
+void inOrder(treeNode* T)
+{
+	if (T == NULL)
+		return;
+	else {
+		preOrder(T->leftChild);
+		//puts(T->data);
+		printf("%d ", T->data);
+		preOrder(T->rightChild);
+	}
+}
+
+void postOrder(treeNode* T)
+{
+	if (T == NULL)
+		return;
+	else {
+		preOrder(T->leftChild);
+		preOrder(T->rightChild);
+		//puts(T->data);
+		printf("%d ", T->data);
+	}
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

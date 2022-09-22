@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>algraphCreate</Title>
+			<Shortcut>algraphCreate</Shortcut>
+			<Description>algraphCreate的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[ALGraph* create_ALGraph()
+{
+	ALGraph* G = new ALGraph;
+	cout << "请输入顶点数和边数：";
+	cin >> G->vexNum >> G->arcsNum;
+
+	getchar();
+	cout << "请依次输入各顶点的值：" << endl;
+	for (int v = 0; v < G->vexNum; v++) {
+		getline(cin, G->List[v].vex);
+		G->List[v].First = NULL;
+	}
+
+	cout << "请依次输入弧头序号、弧尾序号、权值：" << endl;
+	int start, end, w;
+	for (int k = 0; k < G->arcsNum; k++) {
+		cin >> start >> end >> w;
+		arcNode* s = new arcNode;
+		s->vex_num = end;
+		s->weight = w;
+		s->next = G->List[start].First;
+		G->List[start].First = s;
+		
+		arcNode* t = new arcNode;
+		t->vex_num = start;
+		t->weight = w;
+		t->next = G->List[end].First;
+		G->List[end].First = t;
+	}
+	return G;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

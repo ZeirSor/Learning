@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mgraphAddArc</Title>
+			<Shortcut>mgraphAddArc</Shortcut>
+			<Description>mgraphAddArc的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void addArc(MGraph** G)
+{
+	string add_start, add_end;
+	int w;
+	cin >> add_start >> add_end >> w;
+	int d1 = positionInGraph(*G, add_start);
+	int d2 = positionInGraph(*G, add_end);
+	(*G)->Matrix[d1][d2] = w;
+	(*G)->Matrix[d2][d1] = w;
+	(*G)->arcsNum++;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

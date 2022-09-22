@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeQueue</Title>
+			<Shortcut>treeQueue</Shortcut>
+			<Description>treeQueue的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[typedef struct queueNode
+{
+	treeNode* qData;
+	struct queueNode* next;
+}queueNode, * queueNodePtr;
+
+typedef struct Queue
+{
+	queueNode* head;
+	queueNode* rear;
+}Queue, * QueuePtr;
+
+Queue* initQueue()
+{
+	Queue* Q = (Queue*) malloc(sizeof(Queue));
+	Q->head = Q->rear = (queueNode*) malloc(sizeof(queueNode));
+	Q->head->next = NULL;
+	return Q;
+}
+
+void enQueue(Queue* Q, treeNode* t)
+{
+	queueNode* s = (queueNode*) malloc(sizeof(queueNode));
+	s->qData = t;
+	s->next == NULL;
+	Q->rear->next = s;
+	Q->rear = s;
+	return;
+}
+
+int isEmpty(Queue* Q)
+{
+	if (Q->head == Q->rear)
+		return 1;
+	else return 0;
+}
+
+treeNode* deQueue(Queue* Q)
+{
+	if (isEmpty(Q))
+		return NULL;
+	queueNode* s = Q->head->next;
+	Q->head->next = s->next;
+
+	if (Q->rear == s)
+		Q->rear = Q->head;
+
+	return s->qData;
+}
+
+int queueLength(Queue* Q)
+{
+	int len = 0;
+	queueNode* p = Q->head;
+	while (p != Q->rear) {
+		len++;
+		p = p->next;
+	}
+	return len;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

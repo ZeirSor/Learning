@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mgraphBfs</Title>
+			<Shortcut>mgraphBfs</Shortcut>
+			<Description>mgraphBfs的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[void bfs(MGraph* G, int start, int visited[])
+{
+	int i, j;		
+	Queue* Q = initQueue();
+	for (i = 0; i < G->vertexNum; i++) {
+		if (visited[i] == 0)	
+		{
+			visited[i] = 1;		
+			cout << G->vertex[i];
+			enQueue(Q, i);		
+			while (!isEmpty(Q)) {
+				i = positionInGraph(G, deQueue(Q));	
+				for (j = 0; j < G->vertexNum; j++) {
+					if (G->Matrix[i][j] == 1 && visited[j] == 0) {
+						visited[j] = 1;
+						cout << G->vertex[j];
+						enQueue(Q, j);
+					}
+				}
+			}
+		}
+	}
+}
+
+void bfs_MGraph(MGraph* G)
+{
+	string s;
+	cin >> s;
+	memset(visited, 0, sizeof visited);
+	int start = positionInGraph(G, s);
+	bfs(G, start, visited);
+	for (int i = 0; i < G->vertexNum; i++) {
+		if (visited[i] != 1)
+			bfs(G, i, visited);
+	}
+}
+
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

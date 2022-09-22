@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iCyLUMeRP5WDf7yvjKOgvrf9pVr4EgaCMUdwJ7xJXrosCDleS6uCuOkIMSE8vmQiH8HwYvLDaqtjOjTIy3jU4w==",
+  "success": true,
+  "projectFilePath": "D:\\VisualStudio_learning\\Theme\\VSThemeProject3\\VSThemeProject3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ZeirSor\\.nuget\\packages\\microsoft.visualstudio.vsixcolorcompiler\\17.0.31709.430\\microsoft.visualstudio.vsixcolorcompiler.17.0.31709.430.nupkg.sha512"
+  ],
+  "logs": []
+}

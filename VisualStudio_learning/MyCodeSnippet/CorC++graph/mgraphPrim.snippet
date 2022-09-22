@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mgraphPrim</Title>
+			<Shortcut>mgraphPrim</Shortcut>
+			<Description>mgraphPrim的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[typedef struct Edge
+{
+	char vex;
+	int weight;
+}Edge;
+
+Edge* initEdge(Graph* G, int index)
+{
+	Edge* edge = (Edge*)malloc(sizeof(Edge));
+	for (int i = 0; i < G->vexNum; i++)
+	{
+		edge[i].vex = G->vexs[index];
+		edge[i].weight = G->arcs[index][i];
+	}
+	return edge;
+}
+
+int getMinEdge(Graph* G, Edge* edge)
+{
+	int index;
+	int min = MAX;
+	for (int i = 0; i < G->vexNum; i++)
+	{
+		if (edge[i].weight != 0 && edge[i].weight < min)
+		{
+			min = edge[i].weight;
+			index = i;
+		}
+	}
+	return index;
+}
+
+int* Prim(Graph* G, int index)
+{
+	int min;
+	int seleted[MAXSIZE] = { 0 };		//用于标记已选上的顶点，避免重复选出同一条边
+	seleted[index] = 1;
+	Edge* edge = initEdge(G, index);
+	for (int i = 0; i < G->vexNum - 1; i++)
+	{
+		min = getMinEdge(G, edge);
+		printf("\t%c --> %c\tweight = %d\n", edge[min].vex, G->vexs[min], edge[min].weight);
+		edge[min].weight = 0;
+		seleted[min] = 1;
+		for (int j = 0; j < G->vexNum; j++) {
+			if (G->arcs[min][j] < edge[j].weight && seleted[j] == 0) {
+				edge[j].weight = G->arcs[min][j];
+				edge[j].vex = G->vexs[min];
+			}
+		}
+	}
+	return seleted;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

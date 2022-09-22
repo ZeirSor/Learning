@@ -1,0 +1,15 @@
+INPUT(
+./release\aboutdialog.o
+./release\dialog_gaussblur.o
+./release\mainwindow.o
+./release\graphicsview.o
+./release\algorithm.o
+./release\gaussblur.o
+./release\medianfilter.o
+./release\main.o
+./release\qrc_ImageDir.o
+./release\moc_aboutdialog.o
+./release\moc_dialog_gaussblur.o
+./release\moc_mainwindow.o
+./release\moc_medianfilter.o
+);

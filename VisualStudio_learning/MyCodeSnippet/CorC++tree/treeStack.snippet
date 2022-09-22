@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>treeStack</Title>
+			<Shortcut>treeStack</Shortcut>
+			<Description>treeStack的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[typedef struct stackNode
+{
+	treeNode* data;
+	struct stackNode* next;
+}stackNode, * stackNodePtr;
+
+typedef struct stack
+{
+	stackNode* head;
+	stackNode* rear;
+}stack, * stackPtr;
+
+stack* initStack()
+{
+	stack* S = (stack*) malloc(sizeof(stack));
+	S->head = (stackNode*)malloc(sizeof(stackNode));
+	S->head->next = NULL;
+	return S;
+}
+
+void push(stack* S, treeNode* e)
+{
+	stackNode* s = (stackNode*) malloc(sizeof(stackNode));
+	s->data = e;
+	s->next = NULL;
+	s->next = S->head->next;
+	S->head->next = s;
+	return;
+}
+
+int isEmpty_stack(stack* S) 
+{
+	if (S->head->next == NULL)
+		return 1;
+	else return 0;
+}
+
+void pop(stack* S)
+{
+	if (isEmpty_stack(S))
+		return;
+	stackNode* s = S->head->next;
+	S->head->next = s->next;
+
+	free(s);
+}
+
+void printStack(stack* S)
+{
+	stackNode* n = S->head->next;
+	while (n->next) {
+		cout << n->data->data << " <- ";
+		n = n->next;
+	}
+	cout << n->data->data << endl;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

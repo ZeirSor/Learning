@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mgraphQueue</Title>
+			<Shortcut>mgraphQueue</Shortcut>
+			<Description>mgraphQueue的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[typedef struct queueNode
+{
+	string qData;
+	struct queueNode* next;
+}queueNode, * queueNodePtr;
+
+typedef struct Queue
+{
+	queueNode* head;
+	queueNode* rear;
+}Queue, * QueuePtr;
+
+Queue* initQueue()
+{
+	Queue* Q = new Queue;
+	Q->head = Q->rear = new queueNode;
+	Q->head->next = NULL;
+	return Q;
+}
+
+void enQueue(Queue* Q, int t)
+{
+	queueNode* s = new queueNode;
+	s->qData = t;
+	s->next == NULL;
+	Q->rear->next = s;
+	Q->rear = s;
+	return;
+}
+
+int isEmpty(Queue* Q)
+{
+	if (Q->head == Q->rear)
+		return 1;
+	else return 0;
+}
+
+string deQueue(Queue* Q)
+{
+	if (isEmpty(Q))
+		return NULL;
+	queueNode* s = Q->head->next;
+	Q->head->next = s->next;
+
+	if (Q->rear == s)
+		Q->rear = Q->head;
+
+	return s->qData;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

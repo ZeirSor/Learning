@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>tpSort</Title>
+			<Shortcut>tpSort</Shortcut>
+			<Description>tpSort的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[int ToologicalSort(ALGraph* GL)
+{
+	printf("拓扑序列为：\n\n\t");
+
+	int count = 0;		//记录已经输出的顶点数量
+
+	int* stack = (int*)malloc(sizeof(int) * GL->vexNum);	//顺序栈
+	int top = -1;		//规定为-1,方便后续操作
+	int getTop;			//取栈顶值
+	//栈里的值为顶点对应的序号
+
+	for (int i = 0; i < GL->vexNum; i++)
+		if (GL->List[i].in == 0)		//将入度为0的顶点入栈
+			stack[++top] = i;			//top记得++
+
+	arcNode* e;			//用来遍历顶点对应的边表
+	int flag = 0;		//控制"->"的输出数量
+	while (top != -1)	//栈非空
+	{
+		getTop = stack[top--];		//取栈顶值并出栈
+		printf("V%d", (int)(GL->List[getTop].vex - 'a') + 1);	//输出序列
+		if (flag != GL->vexNum - 1)		//n个顶点应该有n-1个"->"
+		{
+			printf(" -> ");
+			flag++;
+		}
+		count++;	//已输出顶点数++
+
+		for (e = GL->List[getTop].First; e; e = e->next)	//遍历边表
+		{
+			int k = e->vex_num;		//k记录当前顶点序号
+			GL->List[k].in--;		//由于上个顶点以删除,故入度-1
+			if (GL->List[k].in == 0)	//将入度为0的顶点入栈
+				stack[++top] = k;
+		}
+	}
+	printf("\n");
+
+	if (count < GL->vexNum)		//输出顶点数量小于总顶点数说明存在环路
+	{
+		printf("\t有环！\n");
+		return 0;
+	}
+	else
+		return 1;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

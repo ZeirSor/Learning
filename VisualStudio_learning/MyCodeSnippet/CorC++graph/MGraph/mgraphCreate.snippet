@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mgraphCreate</Title>
+			<Shortcut>mgraphCreate</Shortcut>
+			<Description>mgraphCreate的代码片段</Description>
+			<Author>Myself</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+				<![CDATA[MGraph* create_MGraph()
+{
+	MGraph* G = new MGraph;
+
+	printf("请输入顶点数和边数:");
+	cin >> G->vertexNum >> G->arcsNum;
+
+	getchar();
+	for (int i = 0; i < G->vertexNum; i++) {
+		printf("请输入第%d个顶点的值: ", i + 1);
+		getline(cin, G->vertex[i]);
+	} cout << endl;
+
+	printf("请输入边不存在的标志：");
+	int flag;	cin >> flag;
+
+	for (int i = 0; i < G->vertexNum; i++)
+		for (int j = 0; j < G->vertexNum; j++)
+			if (i == j) G->Matrix[i][j] = 0;
+			else G->Matrix[i][j] = flag;
+
+	for (int k = 0; k < G->arcsNum; k++)	
+	{
+		int i, j, w;
+		printf("请输入第%d条边的弧尾、弧头、序号和权值: ", k + 1);
+		cin >> i >> j >> w;
+		G->Matrix[i][j] = w;
+		G->Matrix[j][i] = w;
+	}
+	return G;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
