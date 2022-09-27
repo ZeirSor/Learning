@@ -1,0 +1,33 @@
+/* h4 {
+    text-align: center;
+} */
+
+.mydiv {
+    /* text-align: right;
+    text-align: left;
+    text-align: justify; */
+    background-color: lightblue;
+}
+/* 子标签会继承父标签 */
+
+/* a {
+    text-decoration: none;
+} */
+
+.mydiv > p:nth-child(1) {
+    text-shadow: 5px 5px 2px grey,
+        5px -5px 2px red;
+
+    font-size: 2rem;
+
+    font-style: italic;
+
+    font-weight: 900;
+
+    font-family:  ;
+}
+
+/* p {
+    text-shadow: 5p 5px 2px grey,
+    5px -5px 2px red;
+} */
