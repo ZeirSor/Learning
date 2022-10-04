@@ -1,4 +1,4 @@
-package MapDemo;
+package Hello.MapDemo;
 
 import java.util.HashMap;
 import java.util.Iterator;

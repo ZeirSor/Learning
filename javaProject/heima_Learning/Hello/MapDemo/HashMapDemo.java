@@ -1,4 +1,4 @@
-package MapDemo;
+package Hello.MapDemo;
 
 import java.security.DrbgParameters;
 import java.util.*;

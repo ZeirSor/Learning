@@ -1,0 +1,33 @@
+.container {
+    background-color: lightgray;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100vh;
+}
+
+
+/* .card {
+    width: 80%;
+    height: 100vh;
+    background-color: blueviolet;
+    margin: 0 auto;
+} */
+
+
+.row {
+    width: auto;
+}
+
+.col {
+    width: 33.33%;
+    float: left;
+    height: 50px;
+    background-color: chocolate;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}

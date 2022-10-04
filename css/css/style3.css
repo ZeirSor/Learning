@@ -1,0 +1,76 @@
+.div-outer {
+    width: 3000px;
+    height: 3000px;
+    background-color: lightblue;
+    margin: 50px;
+    
+    /* 不让父元素被子元素下带 */
+    /* border-top: 1px solid; */
+    /* padding-top: 1px; */
+    /* overflow: hidden; */
+}
+
+/* 不让父元素被子元素下带 */
+.div-outer {
+    content: "";
+    display: table;
+}
+
+.div-inner {
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    /* margin: 10px 20px 30px 40px; */
+    /* margin: 20px auto; */
+    /* margin-top: 20px;
+    margin-left: 20px; */
+
+    /* margin-right: 20px; */
+
+    /* margin: 10px; */
+    /* display: inline-block; */
+    /* position: sticky; */
+    /* top: 20px; */
+    float: left;
+}
+
+/* 上下外边距重合取大值 */
+
+
+.div-inner-2 {
+    width: 100px;
+    height: 100px;
+    background-color: darkgreen;
+    /* margin-top: 30px;
+    margin-left: 30px; */
+
+    /* padding: 10px; */
+    /* border: 10px solid black; */
+
+    /* box-sizing: border-box; */
+    margin: 10px;
+    /* display: inline-block; */
+    position: static;
+    /* top: 200px;
+    right: 0; */
+
+}
+
+.div-inner-3 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    background-color: darkcyan;
+}
+
+.div-inner-4 {
+    width: 300px;
+    height: 300px;
+    background-color: darkgoldenrod;
+    position: relative;
+    z-index: 3;
+    clear: both;
+}
+
+

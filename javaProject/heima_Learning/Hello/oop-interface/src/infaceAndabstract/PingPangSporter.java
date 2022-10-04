@@ -18,4 +18,6 @@ public class PingPangSporter extends Sporter implements SpeakEnglish {
     public void study() {
         System.out.println("Pingpang sporter is learning pingpang");
     }
+
+
 }

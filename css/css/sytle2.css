@@ -10,9 +10,9 @@
 }
 /* 子标签会继承父标签 */
 
-/* a {
+a {
     text-decoration: none;
-} */
+}
 
 .mydiv > p:nth-child(1) {
     text-shadow: 5px 5px 2px grey,
@@ -24,10 +24,43 @@
 
     font-weight: 900;
 
-    font-family:  ;
+    font-family:  fantasy;
+
+
+    background-color: lightblue;
+    background-image: url(/images/gem1.jpg);
+    background-size: 50px;
+    /* background-repeat: no-repeat; */
+
+    background-repeat: no-repeat;
 }
 
-/* p {
+p {
     text-shadow: 5p 5px 2px grey,
     5px -5px 2px red;
-} */
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+table {
+    border-style: solid;
+    border-collapse: separate;
+}
+
+
+td {
+    border-style: solid;
+    width: 20px;
+    height: 20px;
+}
+
+
+div {
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

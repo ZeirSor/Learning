@@ -16,9 +16,7 @@ public class Test1 {
 //        list.add(new Bosi("bosi1", 11));
 //
 //        KeepPet(list);
-
     }
-
 
     public static void keepPet(ArrayList<? extends Dog> list) {
         for (Dog dog : list) {
