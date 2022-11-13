@@ -8,9 +8,9 @@ public class MyRunnable implements Runnable {
                     " output: Hello world --> " + i);
         }
         try {
+            Thread.sleep(1000);
             System.out.println(Thread.currentThread().getName() +
                     " start to sleep.");
-            Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
