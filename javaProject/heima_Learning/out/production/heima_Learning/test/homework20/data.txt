@@ -1,0 +1,18 @@
+Thread-0 generate the number: 1
+Thread-1 generate the number: 4
+Thread-0: 1 < Thread-1: 4
+Thread-1 generate the number: 8
+Thread-0 generate the number: 5
+Thread-1: 8 > Thread-0: 5
+Thread-0 generate the number: 3
+Thread-1 generate the number: 2
+Thread-0: 3 > Thread-1: 2
+Thread-1 generate the number: 0
+Thread-0 generate the number: 6
+Thread-1: 0 < Thread-0: 6
+Thread-0 generate the number: 9
+Thread-1 generate the number: 7
+Thread-0: 9 > Thread-1: 7
+Thread-0 win count: 3
+Thread-1 win count: 2
+Thread-0 win!
