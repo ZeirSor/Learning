@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本框统计</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <textarea id="textInput" placeholder="在这里输入文本..." maxlength="100000"></textarea>
+    </div>
+    <div class="middle">
+        <div class="button-container">
+            <button onclick="countText()">统计</button>
+            <button onclick="copyText()">复制</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div id="result" contenteditable="true"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
